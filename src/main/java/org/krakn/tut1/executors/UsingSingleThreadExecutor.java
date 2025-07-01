@@ -1,6 +1,6 @@
 package org.krakn.tut1.executors;
 
-import org.krakn.exercise.tuts.common.LoopTaskA;
+import org.krakn.tuts.common.LoopTaskA;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -1,4 +1,4 @@
-package org.krakn.exercise.tuts.common;
+package org.krakn.tuts.common;
 
 import java.util.concurrent.TimeUnit;
 
