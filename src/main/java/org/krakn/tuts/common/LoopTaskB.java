@@ -12,17 +12,18 @@ public class LoopTaskB implements Runnable{
     }
     @Override
     public void run(){
+        Thread.currentThread().setName("Worker-"+taskId);
         String currentThread = Thread.currentThread().getName();
-        System.out.println("##### [" + currentThread + "] " + taskId +" STARTING #####");
+        System.out.println("##### [" + currentThread + "] STARTING #####");
         for(int i=10;i>0;i--){
-            System.out.println("[" + currentThread + "] <"+ taskId +">TICK TICK - " + i);
+            System.out.println("[" + currentThread + "] TICK TICK - " + i);
             try {
                 TimeUnit.MILLISECONDS.sleep(250);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("***** [" + currentThread + "] "+ taskId +"> COMPLETED *****");
+        System.out.println("***** [" + currentThread + "] COMPLETED *****");
     }
 
 }
