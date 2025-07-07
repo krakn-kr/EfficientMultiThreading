@@ -13,16 +13,16 @@ public class LoopTaskC implements Runnable{
     @Override
     public void run(){
 
-        System.out.println("##### [" + Thread.currentThread().getName() + "] STARTING #####");
+        System.out.println("##### [" + Thread.currentThread().getName() +"] <" + taskId + "> STARTING #####");
         for(int i=10;i>0;i--){
-            System.out.println("[" + Thread.currentThread().getName() + "] TICK TICK - " + i);
+            System.out.println("[" + Thread.currentThread().getName() + "] <" + taskId + "> TICK TICK - " + i);
             try {
-                TimeUnit.MILLISECONDS.sleep(250);
+                TimeUnit.MILLISECONDS.sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("***** [" + Thread.currentThread().getName() + "] COMPLETED *****");
+        System.out.println("***** [" + Thread.currentThread().getName() +"] <" + taskId + "> COMPLETED *****");
     }
 
 }
